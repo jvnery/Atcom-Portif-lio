@@ -1,0 +1,324 @@
+@font-face {
+	font-family: 'BentonSans Black';
+	src: url('/fonts/BentonSans\ Black.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans Bold';
+	src: url('/fonts/BentonSans\ Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BentonSans Book';
+	src: url('/fonts/BentonSans\ Book.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f1f1f1;
+	font-family: 'Book';
+}
+
+/* Center website */
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+@media (max-width:1300px) {
+	.container {
+		max-width: 90%;
+		margin: auto;
+	}
+}
+
+/* SECTION 1 */
+
+.intro {
+	padding: 342px 0 210px 0;
+	background-size: cover;
+ 	background-position: center;
+	background-image: linear-gradient(0deg, rgba(174,1,2,1) 10%, rgba(255,255,255,0) 45%), url('/img/banner.jpg');
+}
+
+h1 {
+	font-family: 'BentonSans Black';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: -0.05em;
+	color: #FFFFFF;
+	width: 280px;
+}
+
+@media (max-width:768px) {
+	.intro {
+		padding: 240px 0 80px 0;
+	}
+
+	h1{
+		font-size: 35px;
+		line-height: 35px;
+		width: 250px;
+	}
+}
+
+@media (max-width:425px) {
+	.intro {
+		padding: 150px 0 40px 0;
+		display: grid;
+		place-items: center;
+	}
+
+	h1{
+		font-size: 25px;
+		line-height: 25px;
+		text-align: center;
+	}
+}
+
+/* SECTION 2 */
+
+.filters-slide-banner {
+	background-color: #ae0102;
+	padding: 140px 0 45px 0;
+}
+
+.filters-slide {
+	display: flex;
+	justify-content: space-between;
+}
+
+.filters {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 20px;
+}
+
+.filters .btn {
+	font-family: 'BentonSans Book';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 29px;
+	line-height: 64px;
+	color: #FFFFFF;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+}
+
+.filters .btn:hover {
+	color: #4C0000;
+}
+
+.filters .btn.active {
+	font-family: 'BentonSans Bold';
+}
+
+.slide {
+	width: 545px !important;
+}
+
+.slide .owl-carousel .owl-stage:after {
+    content: none !important;
+    display: none !important;
+}
+
+.slide .owl-item{
+	opacity: 0 !important;
+}
+
+.slide .active{
+	opacity: 1 !important;
+}
+
+.slide .owl-carousel .owl-nav .owl-prev span {
+    content: url(/img/arrow-right.svg);
+}
+
+.slide .owl-carousel .owl-nav .owl-next span {
+    content: url(/img/arrow-left.svg);
+}
+
+.slide .owl-carousel .owl-nav .owl-prev,
+.slide .owl-carousel .owl-nav .owl-next{
+    position: absolute;
+	top: 0;
+	margin-top: -60px;
+}
+
+.slide .owl-carousel .owl-nav .owl-prev{
+	right: 10%;
+}
+
+.slide .owl-carousel .owl-nav .owl-prev:hover{
+	background: none;
+}
+
+.slide .owl-carousel .owl-nav .owl-next{
+	right: 0;
+}
+
+.slide .owl-carousel .owl-nav .owl-next:hover{
+	background: none;
+}
+
+@media (max-width:1080px) {
+	.slide {
+		width: 400px  !important;
+	}
+}
+
+@media (max-width:960px) {
+	.filters .btn {
+		font-size: 26px;
+		line-height: 50px;
+	}
+}
+
+@media (max-width:860px) {
+	.slide {
+		width: 350px  !important;
+	}
+
+	.slide .owl-carousel .owl-nav .owl-prev,
+	.slide .owl-carousel .owl-nav .owl-next{
+		margin-top: -45px;
+}
+
+	.slide .owl-carousel .owl-nav .owl-prev span,
+	.slide .owl-carousel .owl-nav .owl-next span {
+		width: 90%;
+	}
+}
+
+@media (max-width:800px) {
+	.filters .btn {
+		font-size: 23px;
+		line-height: 45px;
+	}
+}
+
+@media (max-width:768px) {
+	.filters-slide-banner {
+		padding: 50px 0 20px 0;
+	}
+
+	.filters .btn {
+		font-size: 20px;
+		line-height: 40px;
+	}
+
+	.slide .owl-carousel .owl-nav .owl-prev,
+	.slide .owl-carousel .owl-nav .owl-next{
+		margin-top: -40px;
+	}
+	
+	.slide .owl-carousel .owl-nav .owl-prev span,
+	.slide .owl-carousel .owl-nav .owl-next span {
+		width: 80%;
+	}
+}
+
+@media (max-width:425px) {
+	.filters-slide-banner {
+		padding: 10px 0 10px 0;
+	}
+
+	.filters-slide {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.filters {
+		padding-top: 0;
+		align-items: center;
+	}
+
+	.filters .btn {
+		font-size: 18px;
+	}
+
+	.slide {
+		padding-top: 30px;
+	}
+}
+
+/* SECTION 3 */
+
+.cases {
+	padding: 140px 0;
+	background: linear-gradient(0deg, rgba(255,255,255,0) 95%, rgba(174,1,2,0.3) 100%);
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.cases .column {
+	padding: 8px 4px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 33.33%;
+	display: none;
+}
+
+/* Clear floats after rows */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+	display: block;
+}
+
+@media (max-width:768px) {
+	.cases {
+		padding: 70px 0;
+	}
+
+	.cases .column {
+		padding: 0 4px;
+	}
+
+	.cases .column {
+		width: 50%;
+	}
+}
+
+@media (max-width:425px) {
+	.cases {
+		padding: 30px 0;
+	}
+
+	.row {
+		display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+	}
+
+	.cases .column {
+		width: 90%;
+	}
+
+	.cases .column {
+		padding: 8px 0;
+	}
+}
